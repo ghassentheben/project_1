@@ -1,0 +1,18 @@
+.header {
+    background-color: $color-secondary;
+    position: relative;
+    height: calc(100vh - (map-get($spacers, 2.5) + map-get($spacers, .25)));
+
+    .nexter-logo{
+        padding-top: map-get($spacers, 2);
+        margin-inline:  auto ;
+
+        img{
+            height: map-get($spacers, 1.5);
+        }
+    }
+
+    &__caption {
+        @include center;
+    }
+}
