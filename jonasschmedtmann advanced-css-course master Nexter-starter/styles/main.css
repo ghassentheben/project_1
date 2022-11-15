@@ -58,43 +58,208 @@ select {
   font: inherit;
 }
 
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
+.primary-heading {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  margin-block: 16px;
+}
+
+.primary-heading--small {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.secondary-heading {
+  color: #c69963;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.button {
+  background-color: #B28451;
+  padding: 0.5rem 1.2rem;
+  border: 0;
+}
+.button a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.global-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.global-container .hero {
+  grid-column: span 12;
+}
+@media (min-width: 800px) {
+  .global-container .hero {
+    grid-column: span 8;
+  }
+}
+.global-container .hero__content {
+  display: grid;
+  grid-template-rows: 1fr -webkit-min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  gap: 1.5rem;
+}
+.global-container .hero__content header {
+  margin-inline: auto;
+}
+.global-container .hero__content .logos {
+  display: flex;
+  justify-content: space-between;
+}
+.global-container .realtors {
+  grid-column: span 12;
+}
+@media (min-width: 800px) {
+  .global-container .realtors {
+    grid-column: 9/13;
+  }
+}
+@media (min-width: 800px) {
+  .global-container .realtors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 600px) {
+  .global-container .realtors__content {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media (min-width: 800px) {
+  .global-container .realtors__content {
+    display: block;
+  }
+}
+
 .navigation {
   background-color: #c69963;
-  padding: 0.75rem 1.25rem;
 }
-.navigation__btn {
-  background-color: transparent;
+.navigation .nav-button {
+  padding: 0.75rem 1.5rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  display: flex;
-  flex-direction: column;
   margin-left: auto;
 }
-.navigation__btn div {
-  width: 2rem;
+@media (min-width: 1000px) {
+  .navigation .nav-button {
+    padding-block: 1.5rem;
+    padding-inline: 0.75rem;
+  }
+}
+.navigation .nav-button div {
   height: 0.125rem;
+  width: 2.2rem;
   background-color: white;
 }
-.navigation__btn :not(:last-child) {
+.navigation .nav-button div:not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
 
-.header {
-  background-color: #101d2c;
-  position: relative;
-  height: calc(100vh - 2.75rem);
+.global-container .hero {
+  height: calc(100vh - 46px);
+  background-color: #54483A;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
 }
-.header .nexter-logo {
-  padding-top: 2rem;
-  margin-inline: auto;
+.global-container .hero__container {
+  padding: 40px;
+  height: 100%;
 }
-.header .nexter-logo img {
+.global-container .hero__content {
+  height: 100%;
+}
+.global-container .hero__content img:first-of-type {
   height: 1.5rem;
 }
-.header__caption {
+.global-container .hero__content section {
+  margin-top: auto;
+}
+.global-container .hero__content section:nth-of-type(2) {
+  color: grey;
+}
+.global-container .hero__content section img {
+  max-height: 1rem;
+  filter: brightness(70%);
+}
+.global-container .hero__content section .logos {
+  padding-top: 24px;
+  border-top: 1px solid grey;
+  position: relative;
+}
+.global-container .hero__content section .logos::after {
+  content: "Seen on";
+  font-size: 14px;
   position: absolute;
+  top: -13px;
   left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}/*# sourceMappingURL=main.css.map */
+  transform: translateX(-40%);
+  background-color: #101d2c;
+  padding-inline: 16px;
+}
+.global-container .realtors {
+  background-color: #101d2c;
+}
+.global-container .realtors__container {
+  padding: 30px;
+}
+.global-container .realtors__container > .secondary-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.global-container .realtors__content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+.global-container .realtors__content .realtor {
+  display: flex;
+  gap: 16px;
+}
+.global-container .realtors__content .realtor:not(:last-of-type) {
+  margin-bottom: 48px;
+}
+.global-container .realtors__content .realtor img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.global-container .realtors__content .realtor p {
+  font-size: 10px;
+  color: gray;
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+  }
+}
+@media (min-width: 1000px) {
+  body .global-container {
+    flex: 1;
+  }
+}
+
+/*  *{
+    background-color: rgb(233, 210, 214);
+    border: 1px solid red;
+}*//*# sourceMappingURL=main.css.map */

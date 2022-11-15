@@ -1,0 +1,53 @@
+.global-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .hero {
+        grid-column: span 12;
+        @include screen (800px) {
+            grid-column: span 8;
+        }
+    
+        &__content{
+            header {
+                margin-inline: auto;
+            }
+            
+            display: grid;
+            grid-template-rows: 1fr min-content 1fr;
+            gap: map-get($spacers, 1.5);
+    
+            .logos {
+                
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .realtors{
+        grid-column: span 12; 
+        
+        @include screen (800px) {
+            grid-column: 9 / 13;
+        }
+        @include screen (800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        &__content{
+
+            @include screen (600px) {
+                display: flex;
+                gap: 16px;
+                
+            }
+            @include screen (800px) {
+                display: block;
+            }
+        }
+
+    }
+    
+    }
+

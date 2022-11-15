@@ -1,16 +1,22 @@
-@use "sass:map";
-
-@import "typography";
-@import "reset";
-@import "functions";
-@import "mixins";
 @import "variables";
+@import "mixins";
+@import "reset";
+@import "typography";
+@import "functions";
 
+@import "components";
+@import "grid";
 @import "navigation";
-@import "header";
+@import "landing";
 @import "realtors";
 @import "features";
 @import "story";
 @import "homes";
 @import "gallery";
 @import "footer";
+@import "main-styles";
+
+/*  *{
+    background-color: rgb(233, 210, 214);
+    border: 1px solid red;
+}*/
