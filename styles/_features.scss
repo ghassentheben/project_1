@@ -1,0 +1,42 @@
+.features{
+    grid-column: span 12;
+    font-family: $font-primary;
+    
+    &__container{
+        padding: 128px 48px;
+    }
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        
+        @include screen (543px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @include screen (791px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .feature{
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            gap: 16px;
+
+            &__svg{
+                margin-top: 8px;
+                width: 48px;
+                height: 32px;
+            }  
+
+            h3{
+                color: $color-grey-dark-1;
+                font-family: $font-display;
+            }
+            p{
+                grid-column: 2 / 3;
+                @include main-text-styles;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.testimonials {
+    grid-column: span 12;
+
+    @include screen (800px){
+        display: grid;
+        grid-template-columns   : 1fr 1fr;
+    }
+
+    &__container{
+
+    }
+
+    &__content{
+        padding: 48px 48px;
+        background-color: $color-grey-light-1;
+        order: 1;
+        display: grid;
+        grid-template-rows: min-content .5fr 1.5fr min-content;
+        gap: 16px;
+
+        p{
+            @include main-text-styles(14px);
+        }
+
+        .button{
+            width: fit-content;
+        }
+
+    }
+
+    .images-container{
+        background-color: $color-primary;
+        padding: 48px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        img{
+            
+        }
+        img:first-of-type{
+            grid-column: 1 / 6;
+            aspect-ratio: 4 / 3;
+            grid-row: 1 / 7;  
+        }
+        img:last-of-type{
+            grid-column: 5 / 9;
+            grid-row: 2 / 5;
+            
+        }
+        
+    }
+
+}

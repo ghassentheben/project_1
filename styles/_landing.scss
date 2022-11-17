@@ -1,0 +1,113 @@
+.global-container{
+    .hero {
+        overflow: hidden;
+        height: calc(100vh - 46px);
+        background-color: $color-grey-dark-1;
+        background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+        @include screen (800px){
+            max-height: 85vh;
+            padding: 40px;
+        }
+        &__container {
+            padding: 40px;
+            height: 100%;
+        }
+
+        &__content{
+            height: 100%;
+            img{
+                &:first-of-type{
+                    height: map-get($spacers, 1.5);
+                }
+            }
+                
+            section {
+                margin-top: auto;
+
+               
+
+                &:nth-of-type(2){
+                    color: grey;
+                }
+                img{
+                    max-height: 1rem;
+                    filter: brightness(70%);
+                        
+                }    
+
+                .logos{
+                    padding-top: 24px;
+                    border-top: 1px solid grey;
+                    position: relative;
+                
+                    display: flex;
+                    justify-content: space-around;
+                
+
+                    &::after{
+                        content: 'Seen on';
+                        font-size: 14px;
+                        position: absolute;
+                        top: -13px;
+                        left: 50%;
+                        transform: translateX(-40%);
+                        background-color: $color-secondary;
+                        padding-inline: 16px;
+                    }
+                }
+            } 
+        }  
+    }
+
+    .realtors{
+        overflow: hidden;
+        background-color: $color-secondary;
+        &__container{
+            padding: 30px;
+            
+            &>.secondary-heading{
+                    text-align: center;
+                    margin-bottom: 16px;
+            }
+        }
+        @include screen (800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 85vh;
+        }
+        
+        &__content{
+
+            width: fit-content;
+            margin-inline: auto;
+            
+            @include screen (600px) {
+                display: flex;
+                gap: 16px;
+                
+            }
+            @include screen (800px) {
+                display: block;
+            }
+          
+            .realtor{
+                display: flex;
+                gap: 16px;
+                &:not(:last-of-type){
+                    margin-bottom: 48px;
+                }
+
+                img{
+                    width: 60px;
+                    height: 60px;   
+                    border-radius: 50%;
+                }
+                p{
+                    font-size: 10px;
+                    color: gray;
+                }
+            }
+        }
+    }
+}

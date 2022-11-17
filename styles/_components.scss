@@ -1,0 +1,46 @@
+.primary-heading{
+    color: white;
+    font-size: map-get($spacers, 2);
+    line-height: 1.1;
+    font-weight: bold;
+    font-family: $font-display;
+    margin-block: 16px;
+}
+
+.primary-heading--small{
+    color: white;
+    font-size: map-get($spacers, 1);
+    line-height: 1.1;
+    font-weight: bold;
+    font-family: $font-display;
+
+}
+
+.primary-heading--italic{
+    color: $color-grey-dark-1;
+    font-size: map-get($spacers, 2);
+    line-height: 1;
+    font-family: $font-display;
+    font-style: italic;
+}
+
+.secondary-heading{
+    color: $color-primary;
+    font-size: calc(map-get($spacers, 1) * .75);
+    font-weight: bold;
+    font-family: $font-display;
+    text-transform: uppercase;
+}
+
+.button{
+    background-color: $color-primary-dark;
+    padding: .5rem 1.2rem;
+    border: 0;
+    a{
+        font-size: .8rem;
+        text-decoration: none;
+        color: white;
+        font-family: $font-display;
+        text-transform: uppercase;
+    }
+}

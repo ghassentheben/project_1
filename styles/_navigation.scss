@@ -1,0 +1,26 @@
+.navigation{
+    background-color: $color-primary;
+
+    .nav{
+
+        &-button{
+            padding: calc(map-get($spacers, 1) * .75) map-get($spacers, 1.5);
+            width: max-content;
+            margin-left: auto;
+
+            @media (min-width: 1000px) {
+                padding-block: map-get($spacers, 1.5); 
+                padding-inline: calc(map-get($spacers, 1) * .75);
+            }
+            div {
+                height: calc($spacer / 8);
+                width: calc(map-get($spacers, 2) * 1.1);
+                background-color: white;
+
+                &:not(:last-of-type){
+                    margin-bottom: calc($spacer / 2);
+                }
+            }
+        }
+    }
+}

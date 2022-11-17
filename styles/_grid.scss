@@ -1,0 +1,53 @@
+.global-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .hero {
+        grid-column: span 12;
+        @include screen (800px) {
+            grid-column: span 8;
+            }
+        
+        &__content{
+
+            header {
+                margin-inline: auto;
+            }
+            
+            display: grid;
+            grid-template-rows: 1fr min-content 1fr;
+            gap: map-get($spacers, 1.5);
+    
+        }
+    }
+    .realtors{
+        grid-column: span 12; 
+        
+        @include screen (800px) {
+            grid-column: 9 / 13;
+        }
+
+    }
+    
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    @include screen (576px) {
+      max-width: 540px;
+    }
+    @include screen (768px) {
+      max-width: 768px;
+    }
+    @include screen (992px) {
+      max-width: 992px;
+    }
+    @include screen (1200px) {
+      max-width: 1200px;
+    }
+}
+  

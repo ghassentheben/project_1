@@ -1,0 +1,12 @@
+body {
+
+    @include screen (1000px) {
+        display: flex;
+    }
+    
+    .global-container{
+        @include screen (1000px) {
+            flex: 1;
+        }
+    }
+}

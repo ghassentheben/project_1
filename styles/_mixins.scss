@@ -1,0 +1,15 @@
+@mixin screen ($width) {
+    @media (min-width: $width) {
+        @content
+    }
+}
+
+
+@mixin main-text-styles ($fs: 16px) {
+    color: $color-grey-dark-2;
+    font-size: $fs;
+    font-family: $font-primary;
+}
+
+
+
